@@ -29,11 +29,11 @@ export default function FourthPage() {
   const fetchLotData = async () => {
     try {
       // productionorderset 데이터 가져오기
-      const productionResponse = await axios.get('http://localhost:3000/getProductionOrderSet');
+      const productionResponse = await axios.get('https://mes-erp.onrender.com/getProductionOrderSet');
       const productionData = productionResponse.data;
 
       // equipmentjob 데이터 가져오기 (최신 상태 정보)
-      const equipmentResponse = await axios.get('http://localhost:3000/getEquipmentJob');
+      const equipmentResponse = await axios.get('https://mes-erp.onrender.com/getEquipmentJob');
       const equipmentData = equipmentResponse.data;
 
       // 두 데이터를 product_id 기준으로 매핑

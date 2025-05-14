@@ -32,7 +32,7 @@ const ReplenishmentRequest = () => {
 
   useEffect(() => {
     // currentinventory 데이터 불러오기
-    axios.get('http://localhost:3000/getCurrentInventory')  // 서버의 실제 API 엔드포인트에 맞게 수정
+    axios.get('https://mes-erp.onrender.com/getCurrentInventory')  // 서버의 실제 API 엔드포인트에 맞게 수정
       .then((response) => {
         setInventoryData(response.data);
         setLoading(false);

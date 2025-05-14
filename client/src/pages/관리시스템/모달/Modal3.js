@@ -30,7 +30,7 @@ const Modal3 = () => {
         const endDate = new Date(toDate);
         endDate.setHours(23, 59, 59, 999);
 
-        const response = await axios.get('http://localhost:3000/getWorkerByDateRange', {
+        const response = await axios.get('https://mes-erp.onrender.com/getWorkerByDateRange', {
           params: {
             fromDate: startDate.toISOString(),
             toDate: endDate.toISOString()

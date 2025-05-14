@@ -11,7 +11,7 @@ export default function SecondPage() {
   const [commonCodes, setCommonCodes] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/getCommonCode')
+    axios.get('https://mes-erp.onrender.com/getCommonCode')
       .then((response) => {
         setCommonCodes(response.data);
       })

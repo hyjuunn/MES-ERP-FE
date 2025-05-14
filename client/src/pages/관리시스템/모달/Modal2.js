@@ -31,7 +31,7 @@ const Modal2 = () => {
         const endDate = new Date(toDate);
         endDate.setHours(23, 59, 59, 999);
   
-        const response = await axios.get('http://localhost:3000/getPartnerByDateRange', {
+        const response = await axios.get('https://mes-erp.onrender.com/getPartnerByDateRange', {
           params: {
             fromDate: startDate.toISOString(),
             toDate: endDate.toISOString()

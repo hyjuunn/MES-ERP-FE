@@ -28,7 +28,7 @@ const DepartmentManagement = () => {
   const [showDeleted, setShowDeleted] = useState(false); // 삭제된 부서원 표시 여부
 
   // API configuration
-  const API_URL = 'http://localhost:3000';
+  const API_URL = 'https://mes-erp.onrender.com';
 
   // Fetch departments and employees on component mount
   useEffect(() => {

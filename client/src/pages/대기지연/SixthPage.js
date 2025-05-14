@@ -32,7 +32,7 @@ const SixthPage = () => {
   const handleConfirmClose = async () => {
     try {
       // 1. equipmentjobhistory에 기록 추가
-      const historyResponse = await axios.post('http://localhost:3000/insertEquipmentJobHistory', {
+      const historyResponse = await axios.post('https://mes-erp.onrender.com/insertEquipmentJobHistory', {
         equipment_id: selectedLot?.id || 1, // 선택된 라인 ID 사용 (없으면 기본값 1)
         event_type: 'work', // 작업 시작이므로 'work'
         product_id: selectedLot?.partno, // 제품 ID
@@ -41,7 +41,7 @@ const SixthPage = () => {
       });
 
       // 2. equipmentjob 업데이트
-      const jobResponse = await axios.post('http://localhost:3000/updateEquipmentJob', {
+      const jobResponse = await axios.post('https://mes-erp.onrender.com/updateEquipmentJob', {
         equipment_id: selectedLot?.id || 1,
         event_type: 'work',
         product_id: selectedLot?.partno,
@@ -50,7 +50,7 @@ const SixthPage = () => {
       });
 
       // 3. productionorderset 상태 업데이트 (기존 기능 유지)
-      const statusResponse = await axios.post('http://localhost:3000/updateStatus', {
+      const statusResponse = await axios.post('https://mes-erp.onrender.com/updateStatus', {
         orderno: selectedLot.orderno,
         status: '진행',
       });

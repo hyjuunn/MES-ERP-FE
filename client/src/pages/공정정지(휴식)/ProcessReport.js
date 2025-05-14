@@ -20,7 +20,7 @@ const ProcessReport = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/getProduction');
+        const response = await axios.get('https://mes-erp.onrender.com/getProduction');
         setProductionData(response.data);
       } catch (error) {
         console.error('데이터 가져오기 실패', error);

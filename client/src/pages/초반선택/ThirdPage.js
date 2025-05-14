@@ -15,7 +15,7 @@ export default function ThirdPage() {
 
   // 'line' 카테고리 코드에 해당하는 항목을 불러오기
   useEffect(() => {
-    axios.get('http://localhost:3000/getCommonCode') // API 호출
+    axios.get('https://mes-erp.onrender.com/getCommonCode') // API 호출
       .then((response) => {
         // 'categorycode'가 'line'인 항목만 필터링
         const filteredLines = response.data.filter(code => code.categorycode === 'line');

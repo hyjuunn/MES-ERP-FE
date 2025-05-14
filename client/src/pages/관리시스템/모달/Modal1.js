@@ -19,7 +19,7 @@ const Modal1 = () => {
         if (partno) params.partno = partno;
         if (partname) params.partname = partname;
 
-        const res = await axios.get('http://localhost:3000/searchItem', { params });
+        const res = await axios.get('https://mes-erp.onrender.com/searchItem', { params });
         setItems(res.data);
       } catch (err) {
         console.error('조회 실패:', err);

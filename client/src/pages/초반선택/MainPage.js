@@ -14,7 +14,7 @@ export default function MainPage() {
   const [selectedProcess, setSelectedProcess] = useState(null); // 👈 선택된 공정 상태
 
   useEffect(() => {
-    axios.get('http://localhost:3000/getCommonCode')
+    axios.get('https://mes-erp.onrender.com/getCommonCode')
       .then((response) => {
         // categorycode가 'areaCode'인 것만 필터링
         const areaCodes = response.data.filter(item => item.categorycode === 'areaCode');

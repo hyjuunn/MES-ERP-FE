@@ -25,7 +25,7 @@ const EnterProduction = () => {
 
     try {
       // 서버로 생산량 업데이트 요청 보내기
-      const response = await axios.post('http://localhost:3000/updateProduction', {
+      const response = await axios.post('https://mes-erp.onrender.com/updateProduction', {
         orderno: selectedLot.orderno,
         amount: parseInt(amount, 10),
         time: new Date().toISOString(),
