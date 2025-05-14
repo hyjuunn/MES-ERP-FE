@@ -9,12 +9,15 @@ app.use(cors());
 app.use(express.json());
 
 // PostgreSQL 연결 세팅
+// const pool = new Pool({
+//   user: 'postgres',
+//   host: 'localhost',
+//   database: 'postgres',
+//   password: 'borakim123',
+//   port: 5432,
+// });
 const pool = new Pool({
-  user: 'postgres',
-  host: 'localhost',
-  database: 'postgres',
-  password: 'borakim123',
-  port: 5432,
+  connectionString: 'postgresql://postgres:borakim123@db.xyagvzmqcbpymnlzyqkr.supabase.co:5432/postgres'
 });
 
 // API
@@ -512,6 +515,9 @@ app.get('/getCurrentInventory', async (req, res) => {
 });
 
 // 서버 시작
-app.listen(port, '0.0.0.0', () => {
-  console.log(`Server Running: http://0.0.0.0:${port}`);
+// app.listen(port, '0.0.0.0', () => {
+//   console.log(`Server Running: http://0.0.0.0:${port}`);
+// });
+app.listen(port, () => {
+  console.log(`Server Running: ${port}`);
 });
